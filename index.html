@@ -132,12 +132,19 @@
 
         <!-- AI Assistant Section -->
         <section id="ai-assistant" class="container reveal" style="margin-top: 5rem; text-align: center;">
-            <div class="glass-card"
-                style="padding: 0; overflow: hidden; height: 750px; background: transparent; border: none;">
-                <iframe src="https://udify.app/chatbot/u8kxnlxoEYmcG9Br"
-                    style="width: 100%; height: 100%; min-height: 700px; border-radius: 12px; box-shadow: 0 0 20px rgba(0, 201, 167, 0.2);"
-                    frameborder="0" allow="microphone">
-                </iframe>
+            <div class="glass-card" id="ai-chat-container"
+                style="padding: 0; overflow: hidden; height: 750px; background: rgba(20, 20, 20, 0.4); border: 1px solid var(--glass-border);">
+                <div id="ai-overlay"
+                    style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem;">
+                    <div
+                        style="width: 80px; height: 80px; background: rgba(0, 201, 167, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-robot" style="font-size: 3rem; color: var(--accent-primary);"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-family: var(--font-heading);">AI Assistant</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">AIアシスタントがあなたのご質問にお答えします。</p>
+                    <button id="start-ai-btn" class="btn-primary large"><i class="fa-solid fa-comments"></i>
+                        チャットを開始する</button>
+                </div>
             </div>
         </section>
     </main>

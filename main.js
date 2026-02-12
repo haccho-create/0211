@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initCanvasAnimation();
+    initAIChatbot();
 });
 
 // Scroll Reveal Observer
@@ -186,4 +187,26 @@ function initCanvasAnimation() {
     }
 
     animate();
+}
+
+// AI Chatbot Lazy Load
+function initAIChatbot() {
+    const btn = document.getElementById('start-ai-btn');
+    const container = document.getElementById('ai-chat-container');
+    if (!btn || !container) return;
+
+    btn.addEventListener('click', () => {
+        // Create iframe
+        const iframe = document.createElement('iframe');
+        iframe.src = "https://udify.app/chatbot/u8kxnlxoEYmcG9Br";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.minHeight = "700px";
+        iframe.style.border = "none";
+        iframe.allow = "microphone";
+
+        // Remove overlay content and append iframe
+        container.innerHTML = '';
+        container.appendChild(iframe);
+    });
 }
