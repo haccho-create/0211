@@ -581,10 +581,22 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 8rem;
+        padding-top: 10rem;
+        /* Increased top padding to account for taller header */
     }
 
     .hero-content {
@@ -597,10 +609,24 @@ footer {
 
     .hero-visual {
         width: 100%;
+        margin-top: 2rem;
+    }
+
+    .profile-card,
+    .strength-image-container {
+        width: 100%;
+        max-width: 320px;
     }
 
     .activities-wrapper {
+        flex-direction: column-reverse;
+        /* Visual on top or bottom? Default logic usually image first or text first. Let's keep column to match flow */
         flex-direction: column;
+    }
+
+    .activities-visual {
+        margin-top: 2rem;
+        height: auto;
     }
 
     .hero h1 {
