@@ -396,6 +396,38 @@ header .container {
     font-size: 0.95rem;
 }
 
+/* Selection Section */
+.selection {
+    padding: 5rem 0;
+}
+
+.selection-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.selection-content p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.selection-content p:last-child {
+    margin-bottom: 0;
+}
+
+.selection-highlight {
+    color: var(--text-primary) !important;
+    font-size: 1.3rem !important;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    padding: 1.5rem;
+    border-left: 3px solid var(--accent-primary);
+    background: var(--glass-highlight);
+    border-radius: 0 12px 12px 0;
+}
+
 /* Activities / Strengths Section */
 .activities {
     padding: 5rem 0;
@@ -577,6 +609,14 @@ footer {
 
 .reveal-group .reveal:nth-child(3) {
     transition-delay: 0.3s;
+}
+
+.reveal-group .reveal:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.reveal-group .reveal:nth-child(5) {
+    transition-delay: 0.5s;
 }
 
 /* Responsive */
